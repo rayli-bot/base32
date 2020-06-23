@@ -1,5 +1,5 @@
 {
-  "name": "base32-ts",
+  "name": "base32c",
   "version": "1.0.0",
   "description": "Base32 with Custom Padding Character in Typescript",
   "keywords": [

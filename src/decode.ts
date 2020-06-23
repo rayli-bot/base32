@@ -5,7 +5,7 @@ function decodeAsBytes(base32Str: string, padder = '=') {
   const base32Reg = new RegExp(`^[A-Z2-7${padder}]+$`, 'g');
   if (!base32Reg.test(base32Str)) {
     throw new Error('Invalid base32 characters');
-  } else if (padder.length !== 1) {
+  } else if (padder.replace('\\', '').length !== 1) {
     throw new Error('Invalid Padding Character');
   }
 

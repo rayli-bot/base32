@@ -1,7 +1,7 @@
 import { BASE32_ENCODE_CHAR } from '../constant';
 
 export function encodeBytes(bytes: Uint8Array, padder = '=') {
-  if (padder.length !== 1) {
+  if (padder.replace('\\', '').length !== 1) {
     throw new Error('Expect Base32 Padder is 1 Character');
   }
   let v1, v2, v3, v4, v5, base32Str = '', length = bytes.length;
